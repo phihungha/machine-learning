@@ -1,0 +1,9 @@
+services:
+  machine-learning:
+    container_name: machine-learning
+    image: haphihung55/machine-learning:latest
+    build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./work:/tf/work
