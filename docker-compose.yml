@@ -6,4 +6,4 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ./work:/tf/work
+      - ${ML_WORK_DIR:-./work}:/tf/work
