@@ -7,3 +7,10 @@ services:
       - 8888:8888
     volumes:
       - ${ML_WORK_DIR:-./work}:/tf/work
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
